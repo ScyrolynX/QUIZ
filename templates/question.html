@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <title> Question page </title>
+        <link rel="stylesheet"  href="{{url_for('static' , filename='style.css')}}">
+    </head>
+<body>
+    <div class="box"> 
+
+        <h1> These are the questions for this quiz, please answer carefully.</h1>
+        <h2> Question {{ques_no}}</h2>
+        <p> {{question}}</p>
+        
+        <form method="POST">  
+            <input type="text"  name="answer" placeholder="Enter your answer....." required autocomplete='off'>
+            <button type="submit"  class="button"> Next question</button>
+        </form>
+    </div>
+
+</body>
+
+</html>

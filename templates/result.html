@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html>
+
+    <head>
+        <title> Result for you quiz </title>
+        <link rel="stylesheet"  href="{{url_for('static', filename='style.css')}}"
+    </head>
+<body>
+    <div class="container">
+    <h1>Quiz is now completed </h1>
+    <h2> These are your performance on the quiz</h2>
+    <p> You have answered {{num}} questions out of {{total}}</p>
+    <p> So you have a total score of {{score}} which is equivalent to {{percent}}%</p>
+    <p> Thanks!.</p>
+    <a href="/"  class="button"> PLAY AGAIN!!</a>
+</div>
+
+</body>
+</html>
