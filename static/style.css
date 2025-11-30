@@ -1,43 +1,98 @@
+/* Reset */
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+/* Body styling */
 body {
-    background: linear-gradient(135deg, #3b8d99, #6b6b83, #aa4b6b);
     font-family: 'Poppins', sans-serif;
+    background: linear-gradient(135deg, #3b8d99, #6b6b83, #aa4b6b);
+    color: white;
     display: flex;
     justify-content: center;
     align-items: center;
-    height: 100vh;
-    color: white;
-    margin: 0;
+    min-height: 100vh;
 }
 
-.box {
-    background: rgba(255,255,255,0.1);
-    padding: 30px;
+/* Container / Box for quiz */
+.box, .container {
+    background: rgba(0, 0, 0, 0.3);
+    padding: 30px 40px;
     border-radius: 15px;
-    text-align: center;
     width: 400px;
-    box-shadow: 0 0 20px rgba(0,0,0,0.2);
+    max-width: 90%;
+    text-align: center;
+    box-shadow: 0 0 20px rgba(0,0,0,0.4);
 }
 
+/* Headings */
+h1 {
+    font-size: 2em;
+    margin-bottom: 15px;
+}
+
+h2 {
+    font-size: 1.5em;
+    margin-bottom: 20px;
+}
+
+/* Paragraphs */
+p {
+    margin-bottom: 15px;
+    line-height: 1.5;
+}
+
+/* Buttons */
 .button, button {
     background-color: #4CAF50;
     color: white;
     border: none;
-    padding: 10px 20px;
-    text-decoration: none;
+    padding: 12px 25px;
+    font-size: 16px;
     border-radius: 8px;
     cursor: pointer;
-    font-size: 16px;
+    margin-top: 10px;
+    text-decoration: none;
+    transition: 0.3s;
 }
 
 .button:hover, button:hover {
     background-color: #45a049;
 }
 
-input {
-    padding: 10px;
-    width: 80%;
-    margin-bottom: 15px;
-    border-radius: 8px;
-    border: none;
-    font-size: 16px;
+/* Radio options */
+.option {
+    text-align: left;
+    margin: 10px 0;
+}
+
+input[type="radio"] {
+    margin-right: 10px;
+    accent-color: #4CAF50;
+}
+
+/* Links */
+.links {
+    margin-top: 20px;
+}
+
+.links a {
+    color: #ffdd57;
+    text-decoration: none;
+    font-weight: bold;
+    transition: 0.3s;
+}
+
+.links a:hover {
+    text-decoration: underline;
+}
+
+/* Responsive */
+@media screen and (max-width: 500px) {
+    .box, .container {
+        padding: 20px;
+        width: 95%;
+    }
 }

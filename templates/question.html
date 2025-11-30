@@ -1,6 +1,7 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en-US">
     <head>
+        <meta charset="UTF-8">
         <title> Question page </title>
         <link rel="stylesheet"  href="{{url_for('static' , filename='style.css')}}">
     </head>
@@ -8,11 +9,16 @@
     <div class="box"> 
 
         <h1> These are the questions for this quiz, please answer carefully.</h1>
-        <h2> Question {{ques_no}}</h2>
+        <h2> Question {{ques_no}} of {{ total if total else '?' }} </h2>
         <p> {{question}}</p>
         
-        <form method="POST">  
-            <input type="text"  name="answer" placeholder="Enter your answer....." required autocomplete='off'>
+        <form method="POST">
+            {% for option in options %}
+                <div class="option">
+                    <input type= "radio"  id="{{option}}"  name="answer" value="{{option}}"  required autocomplete="off">
+                    <label for="{{option}}"> {{option}} </label>
+                </div>
+            {% endfor %}
             <button type="submit"  class="button"> Next question</button>
         </form>
     </div>
